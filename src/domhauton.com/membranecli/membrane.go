@@ -20,14 +20,13 @@ func main() {
 	// Sift input for actual start and flags
 
 	for argIdx := 0; argIdx < len(args); argIdx++ {
-		if currentArg := args[0]; strings.HasPrefix(currentArg, "-") {
+		if currentArg := args[argIdx]; strings.HasPrefix(currentArg, "-") {
 			for flagIdx := 1; flagIdx < len(currentArg); flagIdx++ {
 				switch flag := currentArg[flagIdx]; flag {
 				case 'v':
 					verbose = true
 				case 'h':
-					commands.PrintHelp()
-					os.Exit(0)
+					help = true
 				default:
 					fmt.Fprintf(os.Stderr, "Invalid argument. %q", flag)
 					os.Exit(1)
@@ -48,8 +47,12 @@ func main() {
 		}
 	} else {
 		switch command := args[commandStart]; command {
-		case "status":
+		case commands.DAEMON_STATUS:
 			commands.PrintStatus(ip, port, verbose, help)
+		case commands.TRACKED_FILES:
+			commands.PrintTrackingInfo(ip, port, verbose, help, command)
+		case commands.TRACKED_FOLDERS:
+			commands.PrintTrackingInfo(ip, port, verbose, help, command)
 		case "watch-add":
 		case "watch-list":
 		case "watch-remove":

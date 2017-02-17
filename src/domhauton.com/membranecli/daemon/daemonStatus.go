@@ -17,7 +17,7 @@ type StatusResponse struct {
 	Tagline   string `json:"tagline"`
 }
 
-func Status(ip string, port int) (response StatusResponse, err error) {
+func GetDaemonStatus(ip string, port int) (response StatusResponse, err error) {
 	resp, err := http.Get("http://" + ip + ":" + strconv.Itoa(port))
 	if err != nil {
 		return
