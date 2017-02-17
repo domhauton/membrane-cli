@@ -4,14 +4,15 @@ import (
 	"domhauton.com/membranecli/daemon"
 	"fmt"
 	"log"
-	"time"
 	"strings"
+	"time"
 )
 
 const (
-	TRACKED_FILES string = "tracked-files"
+	TRACKED_FILES   string = "tracked-files"
 	TRACKED_FOLDERS string = "tracked-folders"
-	DAEMON_STATUS string = "status"
+	WATCH_LIST      string = "watch-list"
+	DAEMON_STATUS   string = "status"
 )
 
 func PrintStatus(ip string, port int, verbose bool, help bool) {
@@ -19,7 +20,7 @@ func PrintStatus(ip string, port int, verbose bool, help bool) {
 		fmt.Printf("Getting Membrane Status at %s:%d\n", ip, port)
 	}
 	if help {
-		fmt.Print("Status Help Placeholder")
+		fmt.Printf("Usage: membrane %s\n", DAEMON_STATUS)
 	} else {
 		status, err := daemon.GetDaemonStatus(ip, port)
 		if err != nil {
@@ -39,7 +40,7 @@ func PrintStatus(ip string, port int, verbose bool, help bool) {
 				var duration time.Duration = time.Since(startingTime)
 				fmt.Printf("Status:\t\t%s\nHost:\t\t%s:%d\nVersion:\t%s\nUptime:\t\t%02dH%02d\n",
 					status.Status, status.Hostname, status.Port, status.Version,
-					int(duration.Hours()), int(duration.Minutes()) % 60)
+					int(duration.Hours()), int(duration.Minutes())%60)
 			}
 
 		}
@@ -64,10 +65,10 @@ func PrintTrackingInfo(ip string, port int, verbose bool, help bool, trackingTyp
 			var watchList []string
 			var name string
 
-			if (trackingType == TRACKED_FILES) {
+			if trackingType == TRACKED_FILES {
 				watchList = watcherStatus.TrackedFile
 				name = "file/s"
-			} else if (trackingType == TRACKED_FOLDERS) {
+			} else if trackingType == TRACKED_FOLDERS {
 				watchList = watcherStatus.TrackedFolders
 				name = "folder/s"
 			}
@@ -77,6 +78,29 @@ func PrintTrackingInfo(ip string, port int, verbose bool, help bool, trackingTyp
 			}
 
 			fmt.Printf("Tracked %s:\n\t%s\n", name, strings.Join(watchList, "\n\t"))
+		}
+	}
+}
+
+func PrintWatchedFolders(ip string, port int, verbose bool, help bool) {
+	if verbose {
+		fmt.Printf("Getting Watched Folders at %s:%d\n", ip, port)
+	}
+	if help {
+		fmt.Print("Status Help Placeholder")
+	} else {
+		status, err := daemon.GetDaemonSettings(ip, port)
+		if err != nil {
+			fmt.Println("Membrane Offline. Status unknown.")
+			if verbose {
+				log.Fatal(err)
+			}
+		} else {
+			watchFolders := daemon.GetWatchFoldersAsString(status.Watcher.WatchFolders)
+			if len(watchFolders) == 0 {
+				watchFolders = []string{"None"}
+			}
+			fmt.Printf("Watch Folders:\n\t%s\n", strings.Join(watchFolders, "\n\t"))
 		}
 	}
 }

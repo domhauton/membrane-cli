@@ -53,8 +53,10 @@ func main() {
 			commands.PrintTrackingInfo(ip, port, verbose, help, command)
 		case commands.TRACKED_FOLDERS:
 			commands.PrintTrackingInfo(ip, port, verbose, help, command)
+		case commands.WATCH_LIST:
+			commands.PrintWatchedFolders(ip, port, verbose, help)
 		case "watch-add":
-		case "watch-list":
+			fmt.Print("Command unimplemented.")
 		case "watch-remove":
 			fmt.Print("Command unimplemented.")
 		default:

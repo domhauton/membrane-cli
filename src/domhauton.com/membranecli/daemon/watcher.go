@@ -1,10 +1,10 @@
 package daemon
 
 import (
+	"encoding/json"
+	"io/ioutil"
 	"net/http"
 	"strconv"
-	"io/ioutil"
-	"encoding/json"
 )
 
 type WatcherStatus struct {
