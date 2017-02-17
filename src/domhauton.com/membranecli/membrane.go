@@ -11,8 +11,11 @@ func main() {
 	args := os.Args[1:]
 
 	help := false
-	verbose := true
+	verbose := false
 	commandStart := -1
+
+	ip := "127.0.0.1"
+	port := 13200
 
 	// Sift input for actual start and flags
 
@@ -30,7 +33,7 @@ func main() {
 					os.Exit(1)
 				}
 			}
-		} else if commandStart != -1 {
+		} else if commandStart == -1 {
 			commandStart = argIdx
 		}
 	}
@@ -46,7 +49,7 @@ func main() {
 	} else {
 		switch command := args[commandStart]; command {
 		case "status":
-			commands.PrintStatus(verbose, help)
+			commands.PrintStatus(ip, port, verbose, help)
 		case "watch-add":
 		case "watch-list":
 		case "watch-remove":
