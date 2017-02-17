@@ -8,14 +8,15 @@ import (
 const Version = "1.0.0-alpha.1"
 
 func PrintHelp() {
-	commands := []string{DAEMON_STATUS, TRACKED_FOLDERS, TRACKED_FILES, "watch-add", "watch-list", "watch-remove", "file-recover"}
+	commands := []string{DAEMON_STATUS, TRACKED_FOLDERS, TRACKED_FILES, WATCH_ADD, WATCH_LIST, WATCH_REMOVE, "file-recover"}
 	fmt.Printf(`Usage: membrane <command>
 
 	where <command> is one of: [%s]
 
 Options:
 	-h	print this message
-	-v	enable verbose mode`, strings.Join(commands, ", "))
+	-v	enable verbose mode
+`, strings.Join(commands, ", "))
 }
 
 func NoArgs() {

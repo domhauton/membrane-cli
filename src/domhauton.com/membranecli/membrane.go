@@ -12,6 +12,7 @@ func main() {
 
 	help := false
 	verbose := false
+	recursive := false
 	commandStart := -1
 
 	ip := "127.0.0.1"
@@ -27,6 +28,8 @@ func main() {
 					verbose = true
 				case 'h':
 					help = true
+				case 'r':
+					recursive = true
 				default:
 					fmt.Fprintf(os.Stderr, "Invalid argument. %q", flag)
 					os.Exit(1)
@@ -55,10 +58,10 @@ func main() {
 			commands.PrintTrackingInfo(ip, port, verbose, help, command)
 		case commands.WATCH_LIST:
 			commands.PrintWatchedFolders(ip, port, verbose, help)
-		case "watch-add":
-			fmt.Print("Command unimplemented.")
-		case "watch-remove":
-			fmt.Print("Command unimplemented.")
+		case commands.WATCH_ADD:
+			commands.ModifyWatchedFolders(ip, port, verbose, help, command, recursive, args[commandStart+1:])
+		case commands.WATCH_REMOVE:
+			commands.ModifyWatchedFolders(ip, port, verbose, help, command, recursive, args[commandStart+1:])
 		default:
 			fmt.Fprintf(os.Stderr, "Invalid command. %s", command)
 			os.Exit(1)

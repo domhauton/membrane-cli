@@ -4,6 +4,7 @@ import (
 	"domhauton.com/membranecli/daemon"
 	"fmt"
 	"log"
+	"os"
 	"strings"
 	"time"
 )
@@ -12,6 +13,8 @@ const (
 	TRACKED_FILES   string = "tracked-files"
 	TRACKED_FOLDERS string = "tracked-folders"
 	WATCH_LIST      string = "watch-list"
+	WATCH_ADD       string = "watch-add"
+	WATCH_REMOVE    string = "watch-remove"
 	DAEMON_STATUS   string = "status"
 )
 
@@ -38,9 +41,9 @@ func PrintStatus(ip string, port int, verbose bool, help bool) {
 				}
 			} else {
 				var duration time.Duration = time.Since(startingTime)
-				fmt.Printf("Status:\t\t%s\nHost:\t\t%s:%d\nVersion:\t%s\nUptime:\t\t%02dH%02d\n",
+				fmt.Printf("Status:\t\t%s\nHost:\t\t%s:%d\nVersion:\t%s\nUptime:\t\t%02d:%02d:%02d\n",
 					status.Status, status.Hostname, status.Port, status.Version,
-					int(duration.Hours()), int(duration.Minutes())%60)
+					int(duration.Hours()), int(duration.Minutes())%60, int(duration.Seconds())%60)
 			}
 
 		}
@@ -67,10 +70,10 @@ func PrintTrackingInfo(ip string, port int, verbose bool, help bool, trackingTyp
 
 			if trackingType == TRACKED_FILES {
 				watchList = watcherStatus.TrackedFile
-				name = "file/s"
+				name = "file(s)"
 			} else if trackingType == TRACKED_FOLDERS {
 				watchList = watcherStatus.TrackedFolders
-				name = "folder/s"
+				name = "folder(s)"
 			}
 
 			if watchList == nil || len(watchList) == 0 {
@@ -87,7 +90,7 @@ func PrintWatchedFolders(ip string, port int, verbose bool, help bool) {
 		fmt.Printf("Getting Watched Folders at %s:%d\n", ip, port)
 	}
 	if help {
-		fmt.Print("Status Help Placeholder")
+		fmt.Printf("Usage: membrane %s\n", WATCH_LIST)
 	} else {
 		status, err := daemon.GetDaemonSettings(ip, port)
 		if err != nil {
@@ -100,7 +103,47 @@ func PrintWatchedFolders(ip string, port int, verbose bool, help bool) {
 			if len(watchFolders) == 0 {
 				watchFolders = []string{"None"}
 			}
-			fmt.Printf("Watch Folders:\n\t%s\n", strings.Join(watchFolders, "\n\t"))
+			fmt.Printf("Watch Folder(s):\n\t%s\n", strings.Join(watchFolders, "\n\t"))
+		}
+	}
+}
+
+func ModifyWatchedFolders(ip string, port int, verbose bool, help bool, opType string, recursive bool, args []string) {
+	if help {
+		fmt.Printf("Usage: membrane %s <folder>\nOptions:\n\t-r\trecursive watch folder", opType)
+	} else {
+		if len(args) < 1 {
+			fmt.Fprint(os.Stderr, "Invalid arguments supplied. Check usage.\n")
+			return
+		}
+		directory := args[0]
+		var isAdd bool
+		var printableOp string
+
+		if opType == WATCH_ADD {
+			printableOp = "Adding"
+			isAdd = true
+		} else if opType == WATCH_REMOVE {
+			printableOp = "Removing"
+			isAdd = false
+		}
+
+		if verbose {
+			fmt.Printf("%s Watched Folder [%s] at %s:%d\n", printableOp, directory, ip, port)
+		}
+		watchFolder := daemon.WatchFolder{
+			Recursive: recursive,
+			Directory: directory,
+		}
+
+		if err := daemon.ConfigureWatchFolder(ip, port, watchFolder, isAdd); err != nil {
+			fmt.Fprintf(os.Stderr, "Error adding watch folder. %s\n", err)
+			if verbose {
+				log.Fatal(err)
+			}
+		} else {
+			// TODO Fix this printout
+			fmt.Printf("Successfully added watch folder [%s].\nRun %s to force load.", directory, "n/a")
 		}
 	}
 }

@@ -8,7 +8,7 @@ import (
 	"strconv"
 )
 
-type DaemonWatchFolderInfo struct {
+type WatchFolder struct {
 	Directory string `json:"directory"`
 	Recursive bool   `json:"recursive"`
 }
@@ -17,7 +17,7 @@ type DaemonWatcherSettings struct {
 	FileRescan   int                     `json:"fileRescan"`
 	FolderRescan int                     `json:"folderRescan"`
 	ChunkSize    int                     `json:"chunkSize"`
-	WatchFolders []DaemonWatchFolderInfo `json:"watchFolders"`
+	WatchFolders []WatchFolder `json:"watchFolders"`
 }
 
 type DaemonStorageSettings struct {
@@ -52,14 +52,16 @@ func GetDaemonSettings(ip string, port int) (response DaemonSettings, err error)
 	return
 }
 
-func GetWatchFoldersAsString(watchFolderInfo []DaemonWatchFolderInfo) []string {
+func GetWatchFoldersAsString(watchFolderInfo []WatchFolder) []string {
 	watchFolderStrings := make([]string, len(watchFolderInfo), len(watchFolderInfo))
 	for i := 0; i < len(watchFolderInfo); i++ {
-		start := "\t\t"
+		var preamble string
 		if watchFolderInfo[i].Recursive {
-			start = "recursive"
+			preamble = "[Recursive]"
+		} else {
+			preamble = "[Non-Recur]"
 		}
-		watchFolderStrings[i] = fmt.Sprintf("%s %s", start, watchFolderInfo[i].Directory)
+		watchFolderStrings[i] = fmt.Sprintf("%s %s", preamble, watchFolderInfo[i].Directory)
 	}
 	return watchFolderStrings
 }
