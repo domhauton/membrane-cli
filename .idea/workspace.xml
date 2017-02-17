@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9096b3ad-bb52-4483-8b9a-c783698bbc04" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/autocomplete" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/autocomplete-reload.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/membrane" afterPath="$PROJECT_DIR$/bin/membrane" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/domhauton.com/membranecli/commands/helpCommands.go" afterPath="$PROJECT_DIR$/src/domhauton.com/membranecli/commands/helpCommands.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/domhauton.com/membranecli/commands/membranedCalls.go" afterPath="$PROJECT_DIR$/src/domhauton.com/membranecli/commands/membranedCalls.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/settings.go" afterPath="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/settings.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watcher.go" afterPath="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watcher.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/domhauton.com/membranecli/membrane.go" afterPath="$PROJECT_DIR$/src/domhauton.com/membranecli/membrane.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/autocomplete-reload.sh" afterPath="$PROJECT_DIR$/bin/autocomplete-reload.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -99,7 +92,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autocomplete" pinned="false" current-in-tab="true">
+      <file leaf-file-name="autocomplete" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/autocomplete">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
@@ -109,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autocomplete-reload.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="autocomplete-reload.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/autocomplete-reload.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+            <state relative-caret-position="144">
+              <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -185,8 +178,8 @@
         <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/commands/helpCommands.go" />
         <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/settings.go" />
         <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/commands/membranedCalls.go" />
-        <option value="$PROJECT_DIR$/bin/autocomplete-reload.sh" />
         <option value="$PROJECT_DIR$/bin/autocomplete" />
+        <option value="$PROJECT_DIR$/bin/autocomplete-reload.sh" />
       </list>
     </option>
   </component>
@@ -913,7 +906,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487343250000</updated>
-      <workItem from="1487343254269" duration="24822000" />
+      <workItem from="1487343254269" duration="24953000" />
     </task>
     <task id="LOCAL-00001" summary="Stop tracking out folder.">
       <created>1487349983078</created>
@@ -957,15 +950,22 @@
       <option name="project" value="LOCAL" />
       <updated>1487367344836</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Adding and removing watch folders works.">
+      <created>1487374818616</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1487374818616</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24822000" />
+    <option name="totallyTimeSpent" value="24953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3840" y="-16" width="3840" height="2146" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -979,7 +979,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32955715" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32955715" sideWeight="0.49893448" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32955715" sideWeight="0.49893448" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24986681" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1010,7 +1010,8 @@
     <MESSAGE value="Status Working" />
     <MESSAGE value="Added Tracked-Files and Folder Printing" />
     <MESSAGE value="Added Watch Folder Listing Printing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Watch Folder Listing Printing" />
+    <MESSAGE value="Adding and removing watch folders works." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding and removing watch folders works." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1155,18 +1156,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/autocomplete-reload.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/autocomplete">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/autocomplete-reload.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
           <folding />
         </state>
       </provider>
