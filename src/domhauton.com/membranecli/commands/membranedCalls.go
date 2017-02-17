@@ -31,7 +31,8 @@ func PrintStatus(ip string, port int, verbose bool, help bool) {
 			} else {
 				var duration time.Duration = time.Since(startingTime)
 				fmt.Printf("Status:\t\t%s\nHost:\t\t%s:%d\nVersion:\t%s\nUptime:\t\t%02dH%02d\n",
-					status.Status, status.Hostname, status.Port, status.Version, int(duration.Hours()), int(duration.Minutes())%60)
+					status.Status, status.Hostname, status.Port, status.Version,
+					int(duration.Hours()), int(duration.Minutes())%60)
 			}
 
 		}
