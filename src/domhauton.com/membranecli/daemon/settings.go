@@ -14,9 +14,9 @@ type WatchFolder struct {
 }
 
 type DaemonWatcherSettings struct {
-	FileRescan   int                     `json:"fileRescan"`
-	FolderRescan int                     `json:"folderRescan"`
-	ChunkSize    int                     `json:"chunkSize"`
+	FileRescan   int           `json:"fileRescan"`
+	FolderRescan int           `json:"folderRescan"`
+	ChunkSize    int           `json:"chunkSize"`
 	WatchFolders []WatchFolder `json:"watchFolders"`
 }
 
@@ -32,9 +32,10 @@ type RestAPIConfig struct {
 }
 
 type DaemonSettings struct {
-	Watcher DaemonWatcherSettings `json:"watcherConfig"`
-	Storage DaemonStorageSettings `json:"storageConfig"`
-	RestAPI RestAPIConfig         `json:"restAPIConfig"`
+	Watcher            DaemonWatcherSettings `json:"watcher"`
+	LocalStorage       DaemonStorageSettings `json:"localStorage"`
+	DistributedStorage DaemonStorageSettings `json:"distributedStorage"`
+	RestAPI            RestAPIConfig         `json:"restAPI"`
 }
 
 func GetDaemonSettings(ip string, port int) (response DaemonSettings, err error) {

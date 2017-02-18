@@ -143,7 +143,7 @@ func ModifyWatchedFolders(ip string, port int, verbose bool, help bool, opType s
 			}
 		} else {
 			// TODO Fix this printout
-			fmt.Printf("Successfully added watch folder [%s].\nRun %s to force load.", directory, "n/a")
+			fmt.Printf("Successfully added watch folder [%s].\nRun %s to force load.\n", directory, "n/a")
 		}
 	}
 }

@@ -51,8 +51,6 @@ func ConfigureWatchFolder(ip string, port int, watchFolder WatchFolder, isAdditi
 	if err != nil {
 		return
 	}
-	print(string(data) + "\n")
-
 	url := "http://" + ip + ":" + strconv.Itoa(port) + "/configure/watch_folder"
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(data))
 	if err != nil {
