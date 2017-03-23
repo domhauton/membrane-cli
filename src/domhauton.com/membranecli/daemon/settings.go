@@ -13,14 +13,14 @@ type WatchFolder struct {
 	Recursive bool   `json:"recursive"`
 }
 
-type DaemonWatcherSettings struct {
+type WatcherSettings struct {
 	FileRescan   int           `json:"fileRescan"`
 	FolderRescan int           `json:"folderRescan"`
 	ChunkSize    int           `json:"chunkSize"`
 	WatchFolders []WatchFolder `json:"watchFolders"`
 }
 
-type DaemonStorageSettings struct {
+type StorageSettings struct {
 	SoftStorageCap   int `json:"softStorageCap"`
 	HardStorageCap   int `json:"hardStorageCap"`
 	StorageDirectory int `json:"directory"`
@@ -31,14 +31,14 @@ type RestAPIConfig struct {
 	Port int `json:"port"`
 }
 
-type DaemonSettings struct {
-	Watcher            DaemonWatcherSettings `json:"watcher"`
-	LocalStorage       DaemonStorageSettings `json:"localStorage"`
-	DistributedStorage DaemonStorageSettings `json:"distributedStorage"`
-	RestAPI            RestAPIConfig         `json:"restAPI"`
+type Settings struct {
+	Watcher            WatcherSettings `json:"watcher"`
+	LocalStorage       StorageSettings `json:"localStorage"`
+	DistributedStorage StorageSettings `json:"distributedStorage"`
+	RestAPI            RestAPIConfig   `json:"restAPI"`
 }
 
-func GetDaemonSettings(ip string, port int) (response DaemonSettings, err error) {
+func GetDaemonSettings(ip string, port int) (response Settings, err error) {
 	resp, err := http.Get("http://" + ip + ":" + strconv.Itoa(port) + "/status/config")
 	if err != nil {
 		return
@@ -48,7 +48,7 @@ func GetDaemonSettings(ip string, port int) (response DaemonSettings, err error)
 	if err != nil {
 		return
 	}
-	response = DaemonSettings{}
+	response = Settings{}
 	json.Unmarshal(body, &response)
 	return
 }
