@@ -52,6 +52,16 @@ func main() {
 		switch command := args[commandStart]; command {
 		case commands.DAEMON_STATUS:
 			commands.PrintStatus(ip, port, verbose, help)
+		case commands.STORAGE_STATUS:
+			commands.PrintStorageStatus(ip, port, verbose, help)
+		case commands.NETWORK_STATUS:
+			commands.PrintNetworkStatus(ip, port, verbose, help)
+		case commands.CONTRACT_STATUS:
+			commands.PrintContractStatus(ip, port, verbose, help)
+		case commands.SHOW_PEERS:
+			commands.PrintContractedPeers(ip, port, verbose, help)
+		case commands.ALL_FILES:
+			commands.PrintFiles(ip, port, verbose, help)
 		case commands.TRACKED_FILES:
 			commands.PrintTrackingInfo(ip, port, verbose, help, command)
 		case commands.TRACKED_FOLDERS:
@@ -62,6 +72,10 @@ func main() {
 			commands.ModifyWatchedFolders(ip, port, verbose, help, command, recursive, args[commandStart+1:])
 		case commands.WATCH_REMOVE:
 			commands.ModifyWatchedFolders(ip, port, verbose, help, command, recursive, args[commandStart+1:])
+		case commands.FILE_HISTORY:
+			commands.GetFileHistory(ip, port, verbose, help, args[commandStart+1:])
+		case commands.FILE_RECOVER:
+			commands.RecoverFile(ip, port, help, args[commandStart+1:])
 		default:
 			fmt.Fprintf(os.Stderr, "Invalid command. %s", command)
 			os.Exit(1)

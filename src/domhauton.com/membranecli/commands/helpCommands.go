@@ -5,10 +5,10 @@ import (
 	"strings"
 )
 
-const Version = "1.0.0-alpha.1"
+const Version = "1.0.0-alpha.4"
 
 func PrintHelp() {
-	available_commands := []string{DAEMON_STATUS, TRACKED_FOLDERS, TRACKED_FILES, WATCH_ADD, WATCH_LIST, WATCH_REMOVE, "file-recover"}
+	available_commands := []string{DAEMON_STATUS, ALL_FILES, SHOW_PEERS, FILE_HISTORY, STORAGE_STATUS, NETWORK_STATUS, CONTRACT_STATUS, TRACKED_FOLDERS, TRACKED_FILES, WATCH_ADD, WATCH_LIST, WATCH_REMOVE, "file-recover"}
 	fmt.Printf(`Usage: membrane <command>
 
 	where <command> is one of: [%s]

@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9096b3ad-bb52-4483-8b9a-c783698bbc04" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Go_SDK.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/contract.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/file.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/network.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/storage.go" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/settings.go" afterPath="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watchFolders.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/membrane" afterPath="$PROJECT_DIR$/bin/membrane" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/membrane-cli.iml" afterPath="$PROJECT_DIR$/membrane-cli.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/domhauton.com/membranecli/commands/helpCommands.go" afterPath="$PROJECT_DIR$/src/domhauton.com/membranecli/commands/helpCommands.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/settings.go" afterPath="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/settings.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/domhauton.com/membranecli/commands/membranedCalls.go" afterPath="$PROJECT_DIR$/src/domhauton.com/membranecli/commands/membranedCalls.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watcher.go" afterPath="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watcher.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/domhauton.com/membranecli/membrane.go" afterPath="$PROJECT_DIR$/src/domhauton.com/membranecli/membrane.go" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +34,8 @@
       <file leaf-file-name="membrane.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/membrane.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2016">
-              <caret line="63" column="118" lean-forward="false" selection-start-line="63" selection-start-column="118" selection-end-line="63" selection-end-column="118" />
+            <state relative-caret-position="1600">
+              <caret line="80" column="34" lean-forward="false" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
               <folding>
                 <element signature="e#14#86#0" expanded="true" />
               </folding>
@@ -41,10 +46,34 @@
       <file leaf-file-name="status.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/status.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="795">
+              <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
               <folding>
                 <element signature="e#16#87#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="storage.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/storage.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="923">
+              <caret line="52" column="44" lean-forward="true" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+              <folding>
+                <element signature="e#16#86#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="network.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/network.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="896">
+              <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="29" selection-end-column="39" />
+              <folding>
+                <element signature="e#16#79#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,7 +82,7 @@
       <file leaf-file-name="watcher.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watcher.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1664">
+            <state relative-caret-position="539">
               <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
               <folding>
                 <element signature="e#16#98#0" expanded="true" />
@@ -62,11 +91,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/settings.go">
+      <file leaf-file-name="file.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/file.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
-              <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="608">
+              <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+              <folding>
+                <element signature="e#16#105#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="watchFolders.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watchFolders.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-101">
+              <caret line="11" column="10" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="13" selection-end-column="1" />
               <folding>
                 <element signature="e#16#86#0" expanded="true" />
               </folding>
@@ -77,8 +118,8 @@
       <file leaf-file-name="membranedCalls.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/commands/membranedCalls.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="997">
-              <caret line="126" column="16" lean-forward="false" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
+            <state relative-caret-position="569">
+              <caret line="337" column="39" lean-forward="false" selection-start-line="337" selection-start-column="39" selection-end-line="337" selection-end-column="39" />
               <folding>
                 <element signature="e#18#103#0" expanded="true" />
               </folding>
@@ -86,22 +127,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autocomplete" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/autocomplete">
+      <file leaf-file-name="contract.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/contract.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autocomplete-reload.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/autocomplete-reload.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-              <folding />
+            <state relative-caret-position="736">
+              <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+              <folding>
+                <marker date="1492993617841" expanded="true" signature="108:489" ph="{...}" />
+                <marker date="1492993617841" expanded="true" signature="572:855" ph="{...}" />
+                <marker date="1492993617841" expanded="true" signature="676:689" ph="{...}" />
+                <marker date="1492993617841" expanded="true" signature="770:783" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,20 +146,10 @@
         <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/commands/helpCommands.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
-              <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+              <caret line="10" column="89" lean-forward="false" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="89" />
               <folding>
                 <element signature="e#18#46#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="binary-install.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/binary-install.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -146,6 +172,7 @@
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -166,13 +193,18 @@
         <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/daemonStatus.go" />
         <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watcherStatus.go" />
         <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/daemonSettings.go" />
-        <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/membrane.go" />
         <option value="$PROJECT_DIR$/bin/autocomplete" />
         <option value="$PROJECT_DIR$/bin/autocomplete-reload.sh" />
         <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watcher.go" />
-        <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/commands/membranedCalls.go" />
         <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/settings.go" />
+        <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watchFolders.go" />
+        <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/network.go" />
+        <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/contract.go" />
+        <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/storage.go" />
         <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/commands/helpCommands.go" />
+        <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/file.go" />
+        <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/membrane.go" />
+        <option value="$PROJECT_DIR$/src/domhauton.com/membranecli/commands/membranedCalls.go" />
       </list>
     </option>
   </component>
@@ -184,9 +216,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="3840" />
-    <option name="y" value="-1" />
+    <option name="y" value="6" />
     <option name="width" value="3840" />
-    <option name="height" value="2131" />
+    <option name="height" value="2124" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -204,8 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -308,6 +338,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -325,19 +357,19 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="GO_FMT" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="GO_FMT" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bin" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/domhauton.com/membranecli" />
       <recent name="$PROJECT_DIR$/src/membrane.domhauton.com/cli" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/domhauton.com/membranecli/daemon" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -352,7 +384,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Application.membrane">
     <configuration default="false" name="autocomplete-reload.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="bash" />
       <option name="INTERPRETER_PATH" value="/usr/bin/env" />
@@ -397,10 +429,11 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Build and run" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+    <configuration default="false" name="membrane" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <output_file path="$PROJECT_DIR$/bin" />
       <module name="membrane-cli" />
       <working_directory value="$PROJECT_DIR$" />
-      <parameters value="watch-list -v" />
+      <parameters value="-v" />
       <filePath value="$PROJECT_DIR$/src/domhauton.com/membranecli/membrane.go" />
       <kind value="FILE" />
       <method />
@@ -434,6 +467,13 @@
       <working_directory value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <kind value="DIRECTORY" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
@@ -475,11 +515,11 @@
       <item index="2" class="java.lang.String" itemvalue="Bash.binary-install.sh" />
       <item index="3" class="java.lang.String" itemvalue="Bash.binary-run.sh" />
       <item index="4" class="java.lang.String" itemvalue="Bash.create-binary.sh" />
-      <item index="5" class="java.lang.String" itemvalue="Go Application.Build and run" />
+      <item index="5" class="java.lang.String" itemvalue="Go Application.membrane" />
     </list>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Go Application.Build and run" />
+        <item index="0" class="java.lang.String" itemvalue="Go Application.membrane" />
       </list>
     </recent_temporary>
   </component>
@@ -564,16 +604,18 @@
     <option name="totallyTimeSpent" value="27030000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3840" y="-1" width="3840" height="2131" extended-state="0" />
+    <frame x="3840" y="6" width="3840" height="2124" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.152" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15503463" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32955715" sideWeight="0.50106555" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32955715" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32955715" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33159542" sideWeight="0.49893448" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33229166" sideWeight="0.49893448" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -593,7 +635,6 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -604,6 +645,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="Stop tracking out folder." />
     <MESSAGE value="Remove out folder" />
     <MESSAGE value="Status Working" />
@@ -611,7 +653,10 @@
     <MESSAGE value="Added Watch Folder Listing Printing" />
     <MESSAGE value="Adding and removing watch folders works." />
     <MESSAGE value="Correct autocomplete script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correct autocomplete script" />
+    <MESSAGE value="Update to gogland" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update to gogland" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -622,42 +667,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/commands/membranedCalls.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3808">
-          <caret line="126" column="16" lean-forward="false" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
-          <folding>
-            <element signature="e#18#103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/autocomplete">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/autocomplete-reload.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/commands/helpCommands.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#18#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/binary-install.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -666,7 +675,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/settings.go">
+    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watchFolders.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1472">
           <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
@@ -750,7 +759,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/settings.go">
+    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watchFolders.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
@@ -834,7 +843,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/settings.go">
+    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watchFolders.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
@@ -874,7 +883,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/settings.go">
+    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watchFolders.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1980">
           <caret line="61" column="46" lean-forward="false" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="46" />
@@ -949,14 +958,6 @@
     <entry file="file:///usr/local/go/src/io/ioutil/ioutil.go" />
     <entry file="file:///usr/local/go/src/encoding/json/decode.go" />
     <entry file="file:///usr/local/go/src/time/format.go" />
-    <entry file="file://$PROJECT_DIR$/bin/autocomplete">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/autocomplete-reload.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -973,10 +974,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/settings.go">
+    <entry file="file://$PROJECT_DIR$/bin/autocomplete">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="480">
+          <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/contract.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+          <folding>
+            <marker date="1492993617841" expanded="true" signature="108:489" ph="{...}" />
+            <marker date="1492993617841" expanded="true" signature="572:855" ph="{...}" />
+            <marker date="1492993617841" expanded="true" signature="676:689" ph="{...}" />
+            <marker date="1492993617841" expanded="true" signature="770:783" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/commands/helpCommands.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="10" column="89" lean-forward="false" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="89" />
+          <folding>
+            <element signature="e#18#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/network.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="896">
+          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="29" selection-end-column="39" />
+          <folding>
+            <element signature="e#16#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watcher.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+          <folding>
+            <element signature="e#16#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watchFolders.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-101">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="e#16#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/storage.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="923">
+          <caret line="52" column="44" lean-forward="true" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
           <folding>
             <element signature="e#16#86#0" expanded="true" />
           </folding>
@@ -985,48 +1047,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/status.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="795">
+          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
           <folding>
             <element signature="e#16#87#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/watcher.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1664">
-          <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-          <folding>
-            <element signature="e#16#98#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/membrane.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2016">
-          <caret line="63" column="118" lean-forward="false" selection-start-line="63" selection-start-column="118" selection-end-line="63" selection-end-column="118" />
+        <state relative-caret-position="1600">
+          <caret line="80" column="34" lean-forward="false" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
           <folding>
             <element signature="e#14#86#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/commands/helpCommands.go">
+    <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/daemon/file.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        <state relative-caret-position="608">
+          <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
           <folding>
-            <element signature="e#18#46#0" expanded="true" />
+            <element signature="e#16#105#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/domhauton.com/membranecli/commands/membranedCalls.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="997">
-          <caret line="126" column="16" lean-forward="false" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
+        <state relative-caret-position="569">
+          <caret line="337" column="39" lean-forward="false" selection-start-line="337" selection-start-column="39" selection-end-line="337" selection-end-column="39" />
           <folding>
             <element signature="e#18#103#0" expanded="true" />
           </folding>

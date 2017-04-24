@@ -1,16 +1,16 @@
 package daemon
 
 import (
+	"bytes"
 	"encoding/json"
+	"errors"
 	"io/ioutil"
 	"net/http"
 	"strconv"
-	"errors"
-	"bytes"
 )
 
 const (
-	ADD_CHANGE = "ADD"
+	ADD_CHANGE    = "ADD"
 	REMOVE_CHANGE = "REMOVE"
 )
 
@@ -20,7 +20,7 @@ type WatcherStatus struct {
 }
 
 type watcherModifier struct {
-	ChangeType string `json:"type"`
+	ChangeType  string      `json:"type"`
 	WatchFolder WatchFolder `json:"watchFolder"`
 }
 
@@ -40,8 +40,8 @@ func GetWatcherStatus(ip string, port int) (response WatcherStatus, err error) {
 }
 
 func ConfigureWatchFolder(ip string, port int, watchFolder WatchFolder, isAddition bool) (err error) {
-	request := watcherModifier{};
-	request.WatchFolder = watchFolder;
+	request := watcherModifier{}
+	request.WatchFolder = watchFolder
 	if isAddition {
 		request.ChangeType = ADD_CHANGE
 	} else {
