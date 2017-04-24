@@ -10,15 +10,15 @@ import (
 )
 
 const (
-	TRACKED_FILES   string = "watched-files"
-	TRACKED_FOLDERS string = "watched-folders"
-	WATCH_LIST      string = "watch-list"
+	TRACKED_FILES   string = "monitored-files"
+	TRACKED_FOLDERS string = "monitored-folders"
+	WATCH_LIST      string = "watching"
 	WATCH_ADD       string = "watch-add"
 	WATCH_REMOVE    string = "watch-remove"
 	DAEMON_STATUS   string = "status"
-	STORAGE_STATUS  string = "status-storage"
-	NETWORK_STATUS  string = "status-network"
-	CONTRACT_STATUS string = "status-contract"
+	STORAGE_STATUS  string = "storage"
+	NETWORK_STATUS  string = "network"
+	CONTRACT_STATUS string = "contracts"
 	SHOW_PEERS      string = "peers"
 	ALL_FILES       string = "files"
 	FILE_HISTORY    string = "history"
@@ -95,7 +95,7 @@ func PrintFiles(ip string, port int, verbose bool, help bool) {
 			}
 		} else {
 			if len(status.ReferencedFiles) == 0 {
-				fmt.Print("No files have been backed up yet.")
+				fmt.Println("No files have been backed up yet.")
 			} else {
 				fmt.Printf("File(s):\n\t%s\n", strings.Join(daemon.GetFiles(status), "\n\t"))
 			}
@@ -124,7 +124,7 @@ func PrintNetworkStatus(ip string, port int, verbose bool, help bool) {
 					status.PeerListeningPort,
 					status.UpnpAddress)
 			} else {
-				fmt.Print("Networking Disabled. Enable Contracts for Networking.")
+				fmt.Println("Networking Disabled. Enable Contracts for Networking.")
 			}
 
 		}
@@ -152,7 +152,7 @@ func PrintContractStatus(ip string, port int, verbose bool, help bool) {
 					len(status.PartiallyDeployedShards),
 					len(status.FullyDeployedShards))
 			} else {
-				fmt.Print("Peer Contracts Disabled.")
+				fmt.Println("Peer Contracts Disabled.")
 			}
 
 		}
@@ -175,7 +175,7 @@ func PrintContractedPeers(ip string, port int, verbose bool, help bool) {
 		} else {
 			if status.Enabled {
 				if len(status.ContractedPeers) == 0 {
-					fmt.Print("No peers have been contracted.")
+					fmt.Println("No peers have been contracted.")
 				} else {
 					fmt.Printf("Contracted Peer(s):\n\t%s\n", strings.Join(status.ContractedPeers, "\n\t"))
 				}
@@ -247,7 +247,7 @@ func PrintWatchedFolders(ip string, port int, verbose bool, help bool) {
 
 func ModifyWatchedFolders(ip string, port int, verbose bool, help bool, opType string, recursive bool, args []string) {
 	if help {
-		fmt.Printf("Usage: membrane %s <folder>\nOptions:\n\t-r\trecursive watch folder", opType)
+		fmt.Printf("Usage: membrane %s <folder>\nOptions:\n\t-r\trecursive watch folder\n", opType)
 	} else {
 		if len(args) < 1 {
 			fmt.Fprint(os.Stderr, "Invalid arguments supplied. Check usage.\n")

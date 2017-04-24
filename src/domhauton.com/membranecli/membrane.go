@@ -77,7 +77,7 @@ func main() {
 		case commands.FILE_RECOVER:
 			commands.RecoverFile(ip, port, help, args[commandStart+1:])
 		default:
-			fmt.Fprintf(os.Stderr, "Invalid command. %s", command)
+			fmt.Fprintf(os.Stderr, "Invalid command. '%s'\n", command)
 			os.Exit(1)
 		}
 	}

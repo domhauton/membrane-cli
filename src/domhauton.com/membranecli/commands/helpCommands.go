@@ -8,7 +8,7 @@ import (
 const Version = "1.0.0-alpha.4"
 
 func PrintHelp() {
-	available_commands := []string{DAEMON_STATUS, ALL_FILES, SHOW_PEERS, FILE_HISTORY, STORAGE_STATUS, NETWORK_STATUS, CONTRACT_STATUS, TRACKED_FOLDERS, TRACKED_FILES, WATCH_ADD, WATCH_LIST, WATCH_REMOVE, "file-recover"}
+	available_commands := []string{DAEMON_STATUS, ALL_FILES, SHOW_PEERS, FILE_HISTORY, FILE_RECOVER, STORAGE_STATUS, NETWORK_STATUS, CONTRACT_STATUS, TRACKED_FOLDERS, TRACKED_FILES, WATCH_ADD, WATCH_LIST, WATCH_REMOVE}
 	fmt.Printf(`Usage: membrane <command>
 
 	where <command> is one of: [%s]
@@ -20,5 +20,5 @@ Options:
 }
 
 func NoArgs() {
-	fmt.Printf("Membrane CLI version %s\nUse flag '-h' for more options", Version)
+	fmt.Printf("Membrane CLI version %s\nUse flag '-h' for more options\n", Version)
 }
